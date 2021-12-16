@@ -1,0 +1,37 @@
+<html>
+<head>
+<style>
+h2{
+font-size:30px;
+color:green;
+font-weight:bold;
+text-decoration:underline;
+}
+</style>
+</head>
+<body>
+<center>
+<h2>adding</h2>
+<br>
+<br>
+<label>enter first no:
+<input type="text" id="num1">
+</label>
+<br>
+<br>
+<label>
+enter 2nd no:
+<input type="text" id="num2">
+</label>
+<button onclick="sum1()">add</button>
+<p id="sum"></p>
+<script>
+function sum1(){
+	var x = document.getElementById("num1").value;
+	var y = document.getElementById("num2").value;
+	document.getElementById("sum").innerHTML =parseInt(x)+parseInt(y);
+}
+</script>
+</center>
+</body>
+</html>

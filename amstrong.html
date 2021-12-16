@@ -1,0 +1,43 @@
+<html><head><title>AMstrong Number</title>
+<style>
+h2{
+font-size : 30px;
+color : green;
+font-weight : bold;
+text-decoration : underline; 
+}
+</style>
+</head>
+<body>
+<center>
+<h2>calculate amstrong number</h2>
+<br><br>
+<label>enter any number:
+<input type="text" id="num"> </label>
+<button onClick="amstrong()">Amstrong</button>
+<p id="a"></p >
+<script>
+function amstrong()
+{
+var n = document.getElementById("num").value;
+var e,x,arm= 0;
+var x = parseInt(n);
+while(x>0)
+{
+	 e = x % 10;
+	 x=  parseInt(x/10);
+	 arm= arm+(e*e*e);
+}
+if(parseInt(n)==arm)
+{
+document.getElementById("a").innerHTML =n +"is an amstrong no";
+}
+else
+{
+document.getElementById("a").innerHTML =n +"is not an amstrong no";
+}
+}
+</script>
+</center>
+</body>
+</html>
