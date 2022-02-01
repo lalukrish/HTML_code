@@ -1,0 +1,81 @@
+<html>
+<body>
+<center>
+<form method="post" name="myForm">
+<div class="div"><font size="4" face="Cooper"><h1 align="center">REGISTRATION</h1></font></div>
+<table class="table" align="center" cellpading="20">
+<tr>
+<th>FIRSTNAME</th>
+<td><input type="text" name="fname" required=""></td>
+</tr>
+<tr>
+<th>LASTNAME</th>
+<td><input type="text" name="lname" required=""></td>
+</tr>
+<tr>
+<th>DOB</th>
+<td><input type="date" name="dob" required=""></td>
+</tr>
+<tr>
+<th>GENDER</th>
+<td><input type="radio" name="gender" value="female">Female<input type="radio" name="gender" value="male">Male</td>
+</tr>
+<tr>
+<th>EMAIL</th>
+<td><input type="email" name="email" required=""></td>
+</tr>
+<tr>
+<th>PH:</th>
+<td><input type="number" name="phone" required=""><span id="numloc"></span></td>
+</tr>
+<tr>
+<th>USERNAME</th>
+<td><input type="text" name="uname" required=""></td>
+</tr>
+<tr>
+<th>PASSWORD</th>
+<td><input type="password" name="password" required=""><span id="luk"></span></td>
+</tr>
+<tr>
+<td align="center" colspan="2"><input class="button" onclick="validateform()" type="submit" name="submit" value="REGISTER"></td>
+</tr>
+</table>
+</form>
+<script>
+function validateform()
+{
+var f=document.myform.fname.value;
+var l=document.myform.lname.value;
+var e=document.myform.email.value;
+var atposition=x.indexOf("@");
+var dotposition=x.lastIndexOf(".");
+if(atpostion<1||dotposition<atposition+2||dotposition+2>=x.length)
+{
+alert("Enter valid email"+atposition+"dotposition"+dotposition);
+return false;
+}
+var ph=document.myform.phone.value;
+if(isNaN(ph))
+{
+document.getElementById("numloc").innerHTML="enter numeric value only";
+return false;
+}
+else
+{
+return true;
+}
+var u=document.myform.username.value;
+var p=document.myform.password.value;
+var lw=/[a-z]/g;
+var uw=/[A-Z]/g;
+var n=/[0-9]/g;
+if(p.value.match(lw)||p.value.match(uw)||p.value.match(n)||p.value.length>=8)
+{
+alert("Enter valid password");
+return false;
+}
+}
+</script>
+</center>
+</body>
+</html>

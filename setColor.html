@@ -1,0 +1,20 @@
+<html>
+<body>
+<center>
+<br>
+<br>
+<button class="button" onclick="bgcolor()">Set color</button>
+<script>
+var count=0;
+function bgcolor(color)
+{
+var colorList=["red","green","blue","grey","purple","yellow","white","rose","black"];
+document.body.style.backgroundColor=colorList[count];
+count++;
+if(count==colorList.length)
+count=0;
+}
+</script>
+</center>
+</body>
+</html>
